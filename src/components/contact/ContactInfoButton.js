@@ -1,4 +1,4 @@
-import { Avatar, Box, IconButton } from "@mui/material";
+import { Avatar, Box } from "@mui/material";
 import React from "react";
 
 const ContactInfoButton = ({ svgItem }) => {

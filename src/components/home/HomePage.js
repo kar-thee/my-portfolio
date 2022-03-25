@@ -1,7 +1,6 @@
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import React from "react";
 
-import FilePresentIcon from "@mui/icons-material/FilePresent";
 import MyLinks from "./MyLinks";
 import Name from "./Name";
 import Profile from "./Profile";
