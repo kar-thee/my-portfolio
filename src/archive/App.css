@@ -1,0 +1,13 @@
+.msgBoard {
+  padding: 20px;
+  border: 2px solid grey;
+}
+
+.greenColor {
+  color: green;
+}
+
+.mx-auto {
+  margin: 10px;
+  text-align: center;
+}

@@ -1,29 +1,75 @@
-import React from "react";
+import { Divider } from "@mui/material";
+import React, { useState } from "react";
+import AboutMe from "./about/AboutMe";
 import "./App.css";
+import Contact from "./components/contact/Contact";
+import Footer from "./components/footer/Footer";
+
+import HomePage from "./components/home/HomePage";
+import Navbar from "./components/navbar/Navbar";
+import Projects from "./components/projects/Projects";
+import Skills from "./components/skills/Skills";
+import DrawerComponent from "./util/DrawerComponent";
+import SnackbarFeedback from "./util/SnackbarFeedback";
+
 const App = () => {
+  const [isOpenFeedBack, setIsOpenFeedBack] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  // drawer Functions
+  const openDrawerFunc = () => {
+    setDrawerOpen(true);
+  };
+  const closeDrawerFunc = () => {
+    setDrawerOpen(false);
+  };
+
+  // feedback snackbar functions
+  const handleChangeFeedback = () => {
+    setIsOpenFeedBack((prev) => !prev);
+  };
+  const handleCloseFeedback = () => {
+    setIsOpenFeedBack((prev) => !prev);
+  };
+
   return (
-    <div className="mx-auto">
-      <div className="msgBoard">
-        <h2> I am KARTHEEKEYAN</h2>
+    <>
+      <div id="home" style={{ height: "100vh" }}>
+        <HomePage />
       </div>
 
-      <div className="msgBoard">
-        <h3> Sorry for the inconvenience.... Site under Development</h3>
+      <Navbar openDrawerFunc={openDrawerFunc} />
+
+      <div id="projects">
+        <Projects />
       </div>
-      <div className="msgBoard">
-        <h3>Will go live in a couple of days...</h3>
+
+      <div id="about">
+        <AboutMe />
       </div>
-      <div className="msgBoard">
-        <h3> Please visit my Github Account to check my Projects</h3>
-        <h3>
-          {" "}
-          <a href="https://github.com/kar-thee">Click here</a>
-        </h3>
+
+      <div id="skills">
+        <Skills />
       </div>
-      <div className="msgBoard">
-        <h4 className="greenColor"> Thank You</h4>
+
+      <div id="contact">
+        <Contact handleChangeFeedback={handleChangeFeedback} />
       </div>
-    </div>
+
+      <Divider sx={{ color: "#996600" }} />
+
+      <Footer />
+
+      <DrawerComponent
+        drawerOpen={drawerOpen}
+        closeDrawerFunc={closeDrawerFunc}
+      />
+
+      <SnackbarFeedback
+        isOpen={isOpenFeedBack}
+        handleCloseFeedback={handleCloseFeedback}
+      />
+    </>
   );
 };
 

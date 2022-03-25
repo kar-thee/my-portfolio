@@ -1,13 +1,22 @@
-.msgBoard {
-  padding: 20px;
-  border: 2px solid grey;
+.bg {
+  background-color: #003399;
+  color: rgb(255, 255, 255);
+  overflow: auto;
 }
 
-.greenColor {
-  color: green;
+.textColor {
+  background-color: #5090d3;
+  color: rgb(178, 186, 194);
 }
 
-.mx-auto {
-  margin: 10px;
-  text-align: center;
+.mui-bright-blue {
+  color: rgb(51, 153, 255);
+}
+.mui-bg {
+  background-color: rgb(0, 30, 60);
+  background-color: #002884;
+}
+
+.logoFont {
+  font-family: "Press Start 2P", cursive;
 }
