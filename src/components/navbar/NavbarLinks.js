@@ -28,7 +28,7 @@ const NavbarLinks = () => {
           variant="contained"
           component="a"
           target="_blank"
-          href="https://drive.google.com/file/d/1gg5DIBwvW3B87oHVYz79TCQH5QXitwXX/view"
+          href="https://drive.google.com/file/d/1gDI9HIaE4uh_yMFbCipV944JxUHVevw0/view"
         >
           Resume
         </Button>

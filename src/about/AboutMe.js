@@ -5,7 +5,7 @@ import AboutMeText from "./AboutMeText";
 const AboutMe = () => {
   return (
     <>
-      <Box sx={{ py: 3, my: 3 }}>
+      <Box sx={{ py: 5, my: 5 }}>
         <Container maxWidth="xl">
           <Box>
             <Typography variant="h3" align="center">

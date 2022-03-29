@@ -40,19 +40,22 @@ const App = () => {
 
       <Navbar openDrawerFunc={openDrawerFunc} />
 
-      <div id="projects">
-        <Projects />
-      </div>
-
-      <div id="about">
+      <div
+        id="about"
+        style={{ paddingTop: "40px", paddingBottom: "50px", marginTop: "30px" }}
+      >
         <AboutMe />
       </div>
 
-      <div id="skills">
+      <div id="skills" style={{ paddingTop: "40px", paddingBottom: "40px" }}>
         <Skills />
       </div>
 
-      <div id="contact">
+      <div id="projects" style={{ paddingTop: "40px", paddingBottom: "40px" }}>
+        <Projects />
+      </div>
+
+      <div id="contact" style={{ paddingTop: "40px", paddingBottom: "40px" }}>
         <Contact handleChangeFeedback={handleChangeFeedback} />
       </div>
 
