@@ -1,9 +1,8 @@
 import {
   Box,
-  Button,
-  CardActions,
   CardContent,
   CardMedia,
+  Paper,
   Stack,
   Tooltip,
   Typography,
@@ -11,10 +10,9 @@ import {
 import React from "react";
 
 import MERNImg from "../../assets/projects/MERN.png";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 // import VpnKeyIcon from "@mui/icons-material/VpnKey";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import AccordianComponent from "./AccordianComponent";
+import ProjectButtonComponent from "./ProjectButtonComponent";
 
 const ProjectCard = ({ projectObj }) => {
   // here we object destructuring
@@ -40,7 +38,12 @@ const ProjectCard = ({ projectObj }) => {
           py: 1,
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
+          "&:hover": {
+            boxShadow: "2px 2px 4px",
+          },
         }}
+        component={Paper}
+        elevation={12}
       >
         {/* for img */}
         <Box sx={{ width: "100%", display: "flex", alignItems: "center" }}>
@@ -103,63 +106,17 @@ const ProjectCard = ({ projectObj }) => {
               </Stack>
             </Tooltip>
           </CardContent>
-          {/* here all buttons */}
+
+          {/* here all buttons for github repo and live site */}
           <Box>
-            <CardActions
-              sx={{
-                mx: 1,
-                justifyContent: { xs: "center", md: "space-around" },
-                flexDirection: { xs: "column", md: "row" },
-              }}
-            >
-              <Box sx={{ py: { xs: 2, md: "unset " } }}>
-                <Tooltip title="Client repo">
-                  <Button
-                    size="small"
-                    endIcon={<GitHubIcon />}
-                    variant="contained"
-                    component="a"
-                    href={clientLink}
-                    target="_blank"
-                  >
-                    Front-End
-                  </Button>
-                </Tooltip>
-              </Box>
-
-              <Box sx={{ py: { xs: 2, md: "unset " } }}>
-                <Tooltip title="Server repo">
-                  <Button
-                    size="small"
-                    endIcon={<GitHubIcon />}
-                    variant="contained"
-                    component="a"
-                    href={serverLink}
-                    target="_blank"
-                  >
-                    Back-End
-                  </Button>
-                </Tooltip>
-              </Box>
-
-              <Box sx={{ py: { xs: 2, md: "unset " } }}>
-                <Tooltip title="Live Demo">
-                  <Button
-                    size="small"
-                    endIcon={<OpenInNewIcon />}
-                    variant="contained"
-                    component="a"
-                    href={siteLink}
-                    target="_blank"
-                  >
-                    Live-Demo
-                  </Button>
-                </Tooltip>
-              </Box>
-            </CardActions>
+            <ProjectButtonComponent
+              clientLink={clientLink}
+              serverLink={serverLink}
+              siteLink={siteLink}
+            />
           </Box>
 
-          {/* here accordian */}
+          {/* here accordian for demoCredentials */}
           <Box sx={{ m: 1 }}>
             <AccordianComponent authArray={authArray} />
           </Box>

@@ -51,7 +51,7 @@ const DrawerComponent = ({ drawerOpen, closeDrawerFunc }) => {
               sx={{ textAlign: "center" }}
               component="a"
               target="_blank"
-              href="https://drive.google.com/file/d/1gg5DIBwvW3B87oHVYz79TCQH5QXitwXX/view"
+              href="https://drive.google.com/file/d/108NL6zt0yu7QUUfGwv0mw8OcontA3Hl9/view"
             >
               Resume
             </Button>

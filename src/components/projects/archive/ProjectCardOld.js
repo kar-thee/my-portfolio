@@ -7,7 +7,6 @@ import {
   CardHeader,
   CardMedia,
   Divider,
-  IconButton,
   Stack,
   Tooltip,
   Typography,
@@ -27,7 +26,7 @@ const ProjectCard = ({ projectObj }) => {
     clientLink,
     serverLink,
     siteLink,
-    authLink,
+    // authLink,
     previewImg,
     TechImg,
     headerName,
@@ -167,46 +166,3 @@ const ProjectCard = ({ projectObj }) => {
 };
 
 export default ProjectCard;
-
-{
-  /* <CardActions sx={{ mx: 1 }}>
-          <Tooltip title="Client repo">
-            <Button
-              size="small"
-              endIcon={<GitHubIcon />}
-              variant="contained"
-              component="a"
-              href={clientLink}
-              target="_blank"
-            >
-              Front-End
-            </Button>
-          </Tooltip>
-
-          <Tooltip title="Server repo">
-            <Button
-              size="small"
-              endIcon={<GitHubIcon />}
-              variant="contained"
-              component="a"
-              href={serverLink}
-              target="_blank"
-            >
-              Back-End
-            </Button>
-          </Tooltip>
-
-          <Tooltip title="Live Demo">
-            <Button
-              size="small"
-              endIcon={<OpenInNewIcon />}
-              variant="contained"
-              component="a"
-              href={siteLink}
-              target="_blank"
-            >
-              Live-Demo
-            </Button>
-          </Tooltip>
-        </CardActions> */
-}
