@@ -64,8 +64,8 @@ const ProjectArray = [
     authArray: [
       {
         roleType: "Admin",
-        email: "admin@equiprents.com",
-        password: "admin",
+        email: "ourworldourpeople@gmail.com",
+        password: "Password1@",
       },
       {
         roleType: "Customer",
