@@ -9,9 +9,27 @@ const Projects = () => {
       <Box sx={{ py: 5, my: 5 }}>
         <Container maxWidth="md">
           <Box>
-            <Typography variant="h3" align="center">
+            <Typography variant="h3" align="center" sx={{ mb: 3 }}>
               Projects
             </Typography>
+
+            {/* primary Credentials */}
+            <Box sx={{ py: 3, border: "1px solid #996600", px: 3 }}>
+              <Typography>
+                <span style={{ fontSize: "larger" }}>Credentials</span> -
+                <li style={{ listStyle: "none" }}>
+                  <ol>
+                    {" "}
+                    <span style={{ fontSize: "large" }}>Email</span> :
+                    ourworldourpeople@gmail.com
+                  </ol>
+                  <ol>
+                    <span style={{ fontSize: "large" }}>Password</span> :
+                    Password1@
+                  </ol>
+                </li>
+              </Typography>
+            </Box>
           </Box>
 
           <Grid container justifyContent="center" sx={{ py: 5 }} spacing={4}>
